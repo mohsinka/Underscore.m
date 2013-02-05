@@ -116,7 +116,7 @@
 
 - (USArrayWrapper *)flatten
 {
-    __weak NSArray *array = self.array;
+    __unsafe_unretained NSArray *array = self.array;
     __block NSArray *(^flatten)(NSArray *) = ^NSArray *(NSArray *input) {
         NSMutableArray *result = [NSMutableArray array];
 
